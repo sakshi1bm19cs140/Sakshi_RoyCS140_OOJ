@@ -27,3 +27,54 @@ LABP ROGRAM 3
 WRITEUP
 [Week3.pdf](https://github.com/sakshi1bm19cs140/Sakshi_RoyCS140_week3/files/5487919/Week3.pdf)
 
+
+
+
+EXTRA PROGRAMS OUTPUT SCREEN SCREENSHOT
+
+
+<img src = "https://user-images.githubusercontent.com/71483959/94327336-f14ab000-ffc7-11ea-9863-7e6eade09c72.png">
+
+
+
+
+
+<img src = "https://user-images.githubusercontent.com/71483959/94327343-fad41800-ffc7-11ea-9bf4-6a8a573f5690.png">
+
+
+
+
+
+<img src = "https://user-images.githubusercontent.com/71483959/94327365-23f4a880-ffc8-11ea-880d-d75c441a56b6.png">
+
+
+
+
+
+<img src = "https://user-images.githubusercontent.com/71483959/94327373-2d7e1080-ffc8-11ea-99f7-a4eabefa8770.png">
+
+
+
+
+<img src = "https://user-images.githubusercontent.com/71483959/94327377-37a00f00-ffc8-11ea-9033-f376eb25df61.png">
+
+
+
+
+<img src = "https://user-images.githubusercontent.com/71483959/94327380-3d95f000-ffc8-11ea-8b91-bb2de297c339.png">
+
+
+
+
+<img src = "https://user-images.githubusercontent.com/71483959/95553721-afd8ec80-0a2c-11eb-9911-6d1b1d84d91b.png">
+
+
+
+
+<img src = "https://user-images.githubusercontent.com/71483959/95557155-0268d780-0a32-11eb-8e1d-212632d7d646.png">
+
+
+
+
+<img src = "https://user-images.githubusercontent.com/71483959/95557174-085eb880-0a32-11eb-88dc-f9c435239c4b.png">
+
