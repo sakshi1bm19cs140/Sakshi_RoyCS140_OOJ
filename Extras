@@ -1,0 +1,510 @@
+//Hello World
+public class Hello{
+
+    public static void main(String[] args) {
+System.out.println("Hello World");
+    }
+}
+
+//To find the largest of three numbers
+public class Great {
+    public static void main (String[] args){
+        int a=2, b=4, c=7;
+        if(a>b&&a>c)
+        {
+            System.out.println("Largest number is:" + a);
+        }
+        else if(b>a&&b>c){
+            System.out.println("Largest number is:" + b);
+        }
+        else
+        {
+            System.out.println("Largest number is:" + c);
+        }
+    }
+}
+
+//To print prime numbers
+import java.util.Scanner;
+
+public class Prime {
+    public static void main(String[] args) {
+
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter low range");
+        int low = in.nextInt();
+        System.out.println("Enter high range");
+        int high = in.nextInt();
+
+        while (low < high) {
+            boolean flag = false;
+
+            for(int i = 2; i <= low/2; ++i) {
+                if(low % i == 0) {
+                    flag = true;
+                    break;
+                }
+            }
+
+            if (!flag && low != 0 && low != 1)
+                System.out.print(low + " ");
+
+            ++low;
+        }
+    }
+}
+
+//To print 1 to n numbers
+import java.util.Scanner;
+
+public class Print {
+    public static void main(String[] args)
+    {
+        int i;
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter a number");
+        int n = in.nextInt();
+        for(i=1;i<=n;i++)
+        {
+            System.out.println(i);
+        }
+
+    }
+}
+
+//To print grades
+import java.util.Scanner;
+
+public class Grades {
+    public static void main(String[] args)
+    {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter CIE marks");
+    int cie[] = new int[5];
+    int i;
+    float total=0, total2=0, avg;
+
+        for(i=0; i<5; i++) {
+            System.out.print("Enter Marks of Subject" + (i + 1) + ":");
+            cie[i] = in.nextInt();
+            if(cie[i]>50){
+                System.out.println("Invalid Marks");
+            }
+            total = total + cie[i];
+        }
+        System.out.println("Enter SEE marks");
+        int see[] = new int[5];
+        int j;
+        for(j=0;j<5;j++) {
+            System.out.println("Marks of SEE subject" + (j + 1) + ":");
+            see[j] = in.nextInt();
+            if(see[j]>100){
+                System.out.println("Invalid marks");
+            }
+            total2 = total2 + see[j];
+        }
+    avg = (total+total2)/5;
+        System.out.print("The student Grade is: ");
+        if(avg>=80)
+    {
+        System.out.print("A");
+    }
+        else if(avg>=60 && avg<80)
+    {
+        System.out.print("B");
+    }
+        else if(avg>=40 && avg<60)
+    {
+        System.out.print("C");
+    }
+        else
+    {
+        System.out.print("D");
+    }
+}
+}
+
+//To print half pyramid pattern
+import java.util.Scanner;
+public class Pattern {
+    public static void main(String[] args) {
+         Scanner in = new Scanner(System.in);
+         System.out.println("Enter number of rows:");
+        int rows= in.nextInt();
+        int number = 1;
+        for(int i = 1; i <= rows; i++) {
+
+            for(int j = 1; j <= i; j++) {
+                System.out.print(number + " ");
+                ++number;
+            }
+
+            System.out.println();
+        }
+    }
+}
+
+/*Develop a Java program to create a class Player with variables id, name, scores,
+no_matches_played with default access specifier. Include the following:
+a. Constructors
+b. appropriate methods that calculates the average scores of the player and
+displays the same.
+Create two player objects and display the player details who has the greater average score
+*/
+
+
+import java.util.Scanner;
+class Player{
+    String id;
+    String name;
+    int[] runs;
+    int no_matches_played;
+
+    Player(){}
+
+    Player(String id1, String name1, int[] runs1, int n){
+        id = id1;
+        name = name1;
+        runs = runs1;
+        no_matches_played = n;
+    }
+    void getDetails(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter player details whome you want to compare with Sakshi Roy :");
+        System.out.println("Enter id:");
+        id = sc.next();
+        System.out.println("Enter Name:");
+        name = sc.next();
+        System.out.println("Enter no of matches played:");
+        no_matches_played = sc.nextInt();
+        runs = new int[no_matches_played];
+        for(int i = 0; i < no_matches_played; i++){
+            System.out.println("Enter Runs scored in match " + (i+1) + ":");
+            runs[i] = sc.nextInt();
+        }
+    }
+    void printDetails(){
+        System.out.println("\t**The player details are:**");
+        System.out.println(" Id: " + id + "\n name: " + name + "\n number of matches played: " + no_matches_played);
+        for(int i=0;i<no_matches_played;i++){
+            System.out.println("Runs scored in match " + (i+1) +": " + runs[i]);
+        }
+    }
+    double avg(){
+        int scoreSum = 0;
+        for(int i=0;i<no_matches_played;i++){
+            scoreSum += runs[i];
+        }
+        return (scoreSum/(no_matches_played + 0.0));
+    }
+}
+class match {
+    public static void main(String[] args){
+        int[] run = {78,56,68};
+        double p1avg, p2avg;
+        Player p1 = new Player();
+        Player p2 = new Player("03", "Sakshi Roy", run,  3);
+        p1.getDetails();
+        p1avg = p1.avg();
+        p2avg = p2.avg();
+        p1.printDetails();
+        p2.printDetails();
+        if(p1avg > p2avg){
+            System.out.println("Player 1 has greatest average. i.e, " + p1avg + "\nPlayer 2 average is: " + p2avg);
+        }
+        else if(p2avg > p1avg){
+            System.out.println("Player 2 has greatest average. i.e, " + p2avg + "\nPlayer 1 average is: " + p1avg);
+        }
+        else{
+            System.out.println("Both player 1 and 2 have equal average. " + "\nPlayer 1 average is: " + p1avg + "\nPlayer 2 average is: " + p2avg);
+        }
+    }
+}
+
+
+
+
+
+/*
+  Develop a Java program to create a class Book with members – bookid, booktitle,
+  no_of_pages, year_of_pub, author, publisher and price. Create three objects of book
+  class. Include methods in Book class that do the following:
+  a. Accepting the book details
+  b. Displaying the book details
+  c. Accept the author name and display the book details.
+  d. Display the booktitle of the most expensive book
+  e. Display the count of the books published in the year 2020.
+  f. Display the book details of the book with the least number of pages.
+  */
+
+  import java.util.Scanner;
+  class Book
+  {
+      private int id;
+      private String title;
+      private int nop;
+      private int year;
+      private String auth;
+      private String pub;
+      private double p;
+      void getdetails()
+      {
+          Scanner s=new Scanner(System.in);
+          System.out.println("ENTER ID OF BOOK");
+          id=s.nextInt();
+          System.out.println("ENTER THE TITLE OF BOOK");
+          title=s.next();
+          System.out.println("ENTER NUMBER OF PAGES OF BOOK");
+          nop=s.nextInt();
+          System.out.println("ENTER YEAR OF PUBLISHING OF THE BOOK");
+          year=s.nextInt();
+          System.out.println("ENTER AUTHOR OF BOOK");
+          auth=s.next();
+          System.out.println("ENTER PUBLISHER OF BOOK");
+          pub=s.next();
+          System.out.println("ENTER PRICE OF BOOK");
+          p=s.nextDouble();
+      }
+      void printdetails()
+      {
+          System.out.println("  ID OF BOOK: "+id);
+          System.out.println("  TITLE OF BOOK: "+title);
+          System.out.println("  NUMBER OF PAGES OF BOOK: "+nop);
+          System.out.println("  YEAR OF PUBLISHING OF THE BOOK: "+year);
+          System.out.println("  AUTHOR OF BOOK: "+auth);
+          System.out.println("  PUBLISHER OF BOOK: "+pub);
+          System.out.println("  PRICE OF BOOK: "+p);
+      }
+      double price()
+      {
+          return p;
+      }
+      void displaybooktitle()
+      {
+          System.out.println(title);
+      }
+      int year()
+      {
+          return year;
+      }
+      int pages()
+      {
+          return nop;
+      }
+      String author()
+  {
+     return auth;
+  }
+  }
+  class bookmain
+  {
+      public static void main(String args[])
+      {
+          int c=0;
+          Book b1=new Book();
+          Book b2=new Book();
+          Book b3=new Book();
+          b1.getdetails();
+          b2.getdetails();
+          b3.getdetails();
+          System.out.println("**DETAILS OF THE BOOK1**");
+          b1.printdetails();
+          System.out.println("\n**DETAILS OF THE BOOK2**");
+          b2.printdetails();
+          System.out.println("\n**DETAILS OF THE BOOK3**");
+          b3.printdetails();
+          if(b1.price()>=b2.price() && b1.price()>=b3.price())
+          {
+          System.out.println("\nTHE MOST EXPENSIVE BOOK IS WITH TITLE:  ");
+          b1.displaybooktitle();
+          }
+          else if(b2.price()>=b1.price() && b2.price()>=b3.price())
+          {
+          System.out.println("THE MOST EXPENSIVE BOOK IS WITH TITLE:  ");
+          b2.displaybooktitle();
+          }
+          else
+          {
+          System.out.println("THE MOST EXPENSIVE BOOK IS WITH TITLE:  ");
+          b3.displaybooktitle();
+          }
+          if(b1.year()==2020)
+          c++;
+          if(b2.year()==2020)
+          c++;
+          if(b3.year()==2020)
+          c++;
+          System.out.println("THE NUMBER OF BOOKS PUBLISHED IN THE YEAR 2020 = "+c);
+          if(b1.pages()<=b2.price() && b1.price()<=b3.price())
+         {
+          System.out.println("THE  BOOK  WITH LEAST NUMBER OF PAGES IS BOOK 1 ");
+          b1.printdetails();
+          }
+          else if(b2.pages()<=b1.pages() && b2.pages()<=b3.pages())
+          {
+          System.out.println("THE  BOOK  WITH LEAST NUMBER OF PAGES IS BOOK 2 ");
+          b2.printdetails();
+          }
+          else
+          {
+              System.out.println("THE  BOOK  WITH LEAST NUMBER OF PAGES IS BOOK 3 ");
+              b3.printdetails();
+          }
+      System.out.println("ENTER THE AUTHOR NAME WHOSE BOOK DETAILS NEED TO BE DISPLAYED");
+      Scanner s1=new Scanner(System.in);
+      String auth1=s1.next();
+      if(auth1.compareToIgnoreCase(b1.author())==0)
+      b1.printdetails();
+     else if(auth1.compareToIgnoreCase(b2.author())==0)
+      b2.printdetails();
+     else if(auth1.compareToIgnoreCase(b3.author())==0)
+      b3.printdetails();
+      else
+        System.out.println("THE GIVEN AUTHOR'S BOOK IS NOT FOUND");
+  }
+  }
+  
+  
+  
+  
+  /*Write a Java program to create a class Employee with members empid,
+empname, empnohrs, empbasic, emphra(%), empda(%),empit(%), empgross.
+Include methods to do the following:
+i. Accept all values from the user. Note HRA, DA and IT are given in %
+
+ii. Calculate the gross salary based on the formula
+empgross= empbasic + empbasic*emphra + empbasic*empda - empbasic*empit
+iii. Consider the overtime amount to be Rs.100 per hour. If empnohrs &gt;200, for
+everyhour the employee is to be given additional payment Calculate the
+additional payment and update the gross. If empnohrs&lt;200, reduce Rs.100 per
+hour and update the gross.
+*/
+
+
+import java.util.Scanner;
+class Employee
+ {
+  private int empid,empnohrs,h;
+  private String empname;
+  private double empbasic,emphra,empda,empit,empgross;
+
+ void accept()
+ {
+  Scanner sc = new Scanner(System.in);
+  System.out.println("---------------");
+  System.out.println("Enter Employee id:");
+  empid=sc.nextInt();
+  System.out.println("Enter Employee name:");
+  empname=sc.next();
+  System.out.println("Enter the Basic pay of the employee:");
+  empbasic=sc.nextDouble();
+  System.out.println("Enter the number of hours the employee has worked for:");
+  empnohrs=sc.nextInt();
+  System.out.println("Enter the House rent allowance(%):");
+  emphra=sc.nextDouble();
+  System.out.println("Enter dearness allowance(%):");
+  empda=sc.nextDouble();
+  System.out.println("Enter Income tax(%):");
+  empit=sc.nextDouble();
+ }
+void calculate()
+ {
+  if(empnohrs>200)
+  {
+  empgross = empbasic+((empbasic*emphra)/100)+((empbasic*empda)/100)-((empbasic*empit)/100)+((empnohrs-200)*100);
+ }
+ else
+ {
+  empgross = empbasic+((empbasic*emphra)/100)+((empbasic*empda)/100)-((empbasic*empit)/100)-((200-empnohrs)*100);
+}
+}
+void display()
+{
+ System.out.println("\t****");
+ System.out.println("\n Employee details are:");
+ System.out.println(" ID:"+" " + empid);
+ System.out.println(" NAME:"+" "+ empname);
+ System.out.println(" EMPGROSS:"+" " + empgross);
+}
+}
+class Employeemain
+{
+ public static void main(String args[])
+  {
+   Scanner sc=new Scanner(System.in);
+   System.out.println("Enter the number of employees:");
+   int n = sc.nextInt();
+   Employee e[]=new Employee[n];
+   for(int i=0;i<n;i++)
+{
+    e[i]=new Employee();
+}
+for(int i=0;i<n;i++)
+{
+ System.out.println("Enter Employee"+" "+(i+1)+" details:");
+ e[i].accept();
+ e[i].calculate();
+}
+for(int i=0;i<n;i++)
+{
+e[i].display();
+}
+}
+}
+
+
+
+/*Create a class Age which has the members – years and months. Collect the age of two
+people (Choose their names yourself) (create two age objects) and find who is the
+elder of the two people.*/
+
+
+import java.util.Scanner;
+class age
+{
+  private int years,months;
+  private String name;
+  private int a;
+  void accept(){
+    System.out.println("Enter name:");
+    Scanner sc = new Scanner(System.in);
+    name=sc.next();
+    System.out.println("Enter age in years and months:");
+    years=sc.nextInt();
+    months=sc.nextInt();
+  }
+int calculate()
+{
+if(years>1)
+{
+ a=(years*12)+months;
+}
+else
+{
+ a=years+months;
+}
+return a;
+}
+void display()
+{
+ System.out.println("Person with name " + name +" "+ "is elder");
+}
+}
+class Agemain
+{
+ public static void main(String args[])
+ {
+  age a1=new age();
+  age a2=new age();
+  a1.accept();
+  a2.accept();
+if(a1.calculate()>a2.calculate())
+{
+a1.display();
+}
+else
+{
+a2.display();
+}
+}
+}
