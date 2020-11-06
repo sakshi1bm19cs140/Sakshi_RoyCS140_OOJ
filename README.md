@@ -43,6 +43,11 @@ LAB PROGRAM 5
 
 
 
+WRITEUP
+[lab program 5.pdf](https://github.com/sakshi1bm19cs140/Sakshi_RoyCS140_OOJ/files/5501083/lab.program.5.pdf)
+
+
+
 
 EXTRA PROGRAMS OUTPUT SCREEN SCREENSHOT
 
