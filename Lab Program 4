@@ -1,0 +1,39 @@
+import java.util.Scanner;
+abstract class Shape{
+  int dimension1=10;
+  int dimension2=10;
+  abstract void printArea();
+}
+
+ class Rectangle extends Shape{
+    public void printArea(){
+    System.out.println("The area of rectangle is:" +(dimension1*dimension2));
+  }
+
+}
+class Triangle extends Shape{
+    public void printArea(){
+    System.out.println("The area of triangle is:" + ((dimension1*dimension2)/2));
+  }
+
+}
+ class Circle extends Shape{
+ public void printArea(){
+    System.out.println("The area of circle is:" + ((dimension1*dimension1)*3.14));
+  }
+
+}
+public class Main{
+  public static void main(String args[]){
+   Rectangle r = new Rectangle();
+   Triangle t = new Triangle();
+   Circle c = new Circle();
+   Shape ref;
+   ref=r;
+   ref.printArea();
+   ref=t;
+   ref.printArea();
+   ref=c;
+   ref.printArea();
+  }
+}
