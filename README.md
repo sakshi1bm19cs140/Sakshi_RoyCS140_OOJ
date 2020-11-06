@@ -38,6 +38,12 @@ WRITEUP
 
 
 
+LAB PROGRAM 5
+<img src="![Inheritance lab 5](https://user-images.githubusercontent.com/71483959/98344891-ead53c80-2039-11eb-8b48-fbf7aaf24712.png)
+">
+
+
+
 
 EXTRA PROGRAMS OUTPUT SCREEN SCREENSHOT
 
