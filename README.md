@@ -30,6 +30,12 @@ WRITEUP
 
 
 
+LAB PROGRAM 4
+<img src = "https://user-images.githubusercontent.com/71483959/98334981-1b14df00-202a-11eb-9c05-392930086d0b.png">
+
+
+
+
 EXTRA PROGRAMS OUTPUT SCREEN SCREENSHOT
 
 
