@@ -1,0 +1,136 @@
+import java.util.Scanner;
+class account
+{
+private String name;
+private long account_number;
+private int account_type;
+double balance;
+void set_data()
+{
+Scanner ss=new Scanner(System.in);
+System.out.println("Enter Account Holder Name");
+name = ss.next();
+System.out.println("Enter the account Number");
+account_number=ss.nextLong();
+System.out.println("Choose the account type:\n1.savings account\n2.current account");
+account_type=ss.nextInt();
+}
+void get_data(){
+System.out.println("Account Holder: "+name);
+System.out.println("Account Number: "+account_number);
+}
+int return_account_type()
+{
+return account_type;
+}
+}
+class savings extends account
+{
+Scanner ss=new Scanner(System.in);
+double amount;
+void get_sav_balance()
+{
+System.out.println("Enter the Amount to be placed in your Savings Account");
+amount=ss.nextDouble();
+balance+=amount;
+}
+void display_sav_blnce()
+{
+System.out.println("balance= "+balance);
+}
+void compute_sav_interest()
+{
+System.out.println("\n***Calculating Compound Interest***");
+System.out.println("Enter annual interest rate: ");
+float rate = ss.nextFloat();
+System.out.println("Enter time in years: ");
+float time = ss.nextFloat();
+System.out.println("Enter principle: ");
+float principle = ss.nextFloat();
+float CI = (float)((principle*(Math.pow((1 + rate / (12*100)),(12*time))))-principle);
+System.out.println("The Compound Interest is: " +CI);
+balance = balance+CI;
+System.out.println("Balance after adding Interest: "+balance);
+}
+void withdrawl_sav()
+{
+System.out.println("Enter the amount to be withdrawn");
+amount = ss.nextDouble();
+balance=balance-amount;
+}
+}
+class current extends account
+{
+Scanner ss = new Scanner(System.in);
+double amount;
+final double min_balance=500;
+void get_cur_balance()
+{
+System.out.println("Enter the amount to be placed in your current account");
+amount=ss.nextDouble();
+balance+=amount;
+}
+void display_cur_blnce()
+{
+System.out.println("Balance = "+balance);
+}
+void compute_cur_service_charges()
+{
+if(balance<min_balance)
+{
+System.out.println("service tax of rs.100 shall be levied");
+balance=balance-100;
+}
+else
+{
+System.out.println("Minimum balance is Maintained");
+}
+}
+void withdrawl_cur()
+{
+System.out.println("Enter the amount to be withdrawn");
+amount=ss.nextDouble();
+balance=balance-amount;
+}
+}
+class bank
+{
+public static void main(String args[])
+{
+Scanner ss = new Scanner(System.in);
+int type;
+System.out.println("Enter the bank details");
+account acc=new account();
+acc.set_data();
+type=acc.return_account_type();
+if (type==1)
+{
+System.out.println("SAVINGS ACCOUNT");
+acc.get_data();
+savings sav = new savings();
+sav.get_sav_balance();
+sav.display_sav_blnce();
+System.out.println("Do you want to calculate Interest or not:\nIf yes press 1 else 0");
+int ch = ss.nextInt();
+if (ch == 1)
+{
+sav.compute_sav_interest();
+}
+sav.display_sav_blnce();
+sav.withdrawl_sav();
+sav.display_sav_blnce();
+}
+if(type==2)
+{
+System.out.println("CURRENT ACCOUNT");
+acc.get_data();
+current cur=new current();
+cur.get_cur_balance();
+cur.display_cur_blnce();
+cur.compute_cur_service_charges();
+cur.display_cur_blnce();
+cur.withdrawl_cur();
+cur.display_cur_blnce();
+}
+}
+}
