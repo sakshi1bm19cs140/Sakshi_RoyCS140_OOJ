@@ -1,3 +1,9 @@
+!!***LAB TEST 1 RECORD(WORD FILE)***!!
+https://docs.google.com/document/d/1aNIwhLRj8S3yBAVpWaWIc0MqYsBV3-0vHA5Cj_uNTag/edit?usp=drivesdk
+
+
+
+
 OUTPUT SCREENS
 LAB PROGRAM 1
 <img src = "https://user-images.githubusercontent.com/71483959/94885989-679b5680-048f-11eb-8a5e-59b3665c7af3.png">
