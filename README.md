@@ -16,6 +16,12 @@ LAB PROGRAM 8::
 ![EH](https://user-images.githubusercontent.com/71483959/100418580-036ccb80-30a9-11eb-941b-2c31c9e76e45.png)
 
 
+
+WRITEUP FOR LAB PROGRAM 7 AND 8::
+[WRITE UP(3) (1).pdf](https://github.com/sakshi1bm19cs140/Sakshi_RoyCS140_OOJ/files/5606364/WRITE.UP.3.1.pdf)
+
+
+
 Lab 6::
 
 
