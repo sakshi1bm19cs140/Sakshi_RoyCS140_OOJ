@@ -1,0 +1,21 @@
+class myGen<a,b>{
+    a obj1;
+    b obj2;
+
+  myGen(a obj1, b obj2){
+      this.obj1 = obj1;
+      this.obj2 = obj2;
+  }
+  void Display(){
+      System.out.println(obj1);
+      System.out.println(obj2);
+  }
+}
+public class Genericsmain{
+    public static void main(String args[]){
+        myGen<Integer,Double>myG1 = new myGen<Integer,Double>(24,34.4);
+        myGen<Character,Double>myG2 = new myGen<Character,Double>('A',101.2);
+        myG1.Display();
+        myG2.Display();
+    }
+}
