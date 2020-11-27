@@ -1,0 +1,82 @@
+package CIE;
+import java.util.Scanner;
+public class Student
+{
+public String name;
+public String usn;
+public int sem;
+public void display()
+{
+Scanner s=new Scanner(System.in);
+System.out.println("Name:");
+name=s.next();
+System.out.println("USN:");
+usn=s.next();
+System.out.println("Semester:");
+sem=s.nextInt();
+}
+}
+
+
+package CIE;
+import java.util.Scanner;
+public class Internals extends Student
+{
+public double ciem[];
+public void display()
+{
+ciem=new double[5];
+Scanner t=new Scanner(System.in);
+System.out.println("CIE Marks for 5 subjects(out of 50):");
+for(int i=0;i<5;i++)
+ciem[i]=t.nextDouble();
+}
+}
+
+
+package SEE;
+import java.util.*;
+import CIE.*;
+public class Externals extends CIE.Student
+{
+public double seem[];
+public void display()
+{
+seem=new double[5];
+Scanner s=new Scanner(System.in);
+System.out.println("SEE Marks for 5 subjects(out of 100):");
+for(int i=0;i<5;i++)
+seem[i]=s.nextDouble();
+}
+}
+
+import CIE.*;
+import SEE.*;
+import java.util.Scanner;
+public class Main
+{
+public static void main(String args[])
+{
+int n;
+Scanner s=new Scanner(System.in);
+System.out.println("Enter the number of students:");
+n=s.nextInt();
+CIE.Student st[]=new CIE.Student[n];
+CIE.Internals in[]=new CIE.Internals[n];
+SEE.Externals e[]=new SEE.Externals[n];
+for(int i=0;i<n;i++)
+{
+st[i]=new CIE.Student();
+in[i]=new CIE.Internals();
+e[i]=new SEE.Externals();
+st[i].display();
+in[i].display();
+e[i].display();
+System.out.println("Total marks of student"+st[i].name+" in 5 subjects are:");
+for(int j=0;j<5;j++)
+{
+System.out.println(in[i].ciem[j]+(e[i].seem[j]/2));
+}
+}
+}
+}
