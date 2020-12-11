@@ -13,6 +13,18 @@ OUTPUT SCREEN::
 
 
 
+
+
+
+WRITE-UP::
+
+
+
+[Multithreading.pdf](https://github.com/sakshi1bm19cs140/Sakshi_RoyCS140_OOJ/files/5677543/Multithreading.pdf)
+
+
+
+
 LAB PROGRAM 7::
 ![G](https://user-images.githubusercontent.com/71483959/100418569-ffd94480-30a8-11eb-8d48-2ca2278b2d24.png)
 
