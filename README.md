@@ -1,6 +1,18 @@
 !!***LAB TEST 1 RECORD(WORD FILE)***!!
 https://docs.google.com/document/d/1aNIwhLRj8S3yBAVpWaWIc0MqYsBV3-0vHA5Cj_uNTag/edit?usp=drivesdk
 
+
+
+LAB PROGRAM 9::
+OUTPUT SCREEN::
+
+
+
+![Lab](https://user-images.githubusercontent.com/71483959/101873564-28833300-3bad-11eb-92bb-193fc41e0e4d.png)
+
+
+
+
 LAB PROGRAM 7::
 ![G](https://user-images.githubusercontent.com/71483959/100418569-ffd94480-30a8-11eb-8d48-2ca2278b2d24.png)
 
