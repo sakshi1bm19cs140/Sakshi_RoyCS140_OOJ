@@ -3,6 +3,19 @@ https://docs.google.com/document/d/1aNIwhLRj8S3yBAVpWaWIc0MqYsBV3-0vHA5Cj_uNTag/
 
 
 
+Synchronisation Multiplication Table::
+WRITE UP::
+
+
+
+[Synchronisation_MulTable (1).pdf](https://github.com/sakshi1bm19cs140/Sakshi_RoyCS140_OOJ/files/5714270/Synchronisation_MulTable.1.pdf)
+
+
+OUTPUT::
+![MulTable](https://user-images.githubusercontent.com/71483959/102587022-2ed75900-4131-11eb-99de-bec9f0057b2b.png)
+
+
+
 LAB PROGRAM 9::
 OUTPUT SCREEN::
 
